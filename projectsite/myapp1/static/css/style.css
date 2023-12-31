@@ -1,41 +1,38 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    font-family: 'Roboto Slab';
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 body {
-    /* background-color: #d3d3d3; */
     background-image: url('../images/background.jpg');
-    background-size: cover; /* This property ensures the image covers the entire body */
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Set the background position as fixed */
-    height: 100%;
+    background-attachment: fixed;
+    height: 100vh;
     margin: 0;
     padding: 0;
+
 }
 
 main {
-    padding-top: 60px;
-    padding-bottom: 60px; /* Adjust as needed */
+    padding: 60px;
 }
 
 .navbar {
-    padding-left: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 15px;
+    background-color: #1e4168;
+    color: #fff;
 }
 
-/* Footer Styles */
 footer {
-    background-color: #ebe8e8;
-    color: black;
+    background-color: #2d2d2d;
+    color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-/* Footer Columns */
 .footer-columns {
     display: flex;
     justify-content: space-between;
@@ -48,7 +45,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Footer Links */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -56,15 +52,19 @@ footer {
 }
 
 .footer-links li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .footer-links a {
     text-decoration: none;
-    color: black;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Social Icons */
+.footer-links a:hover {
+    color: #1e4168;
+}
+
 .social-icons {
     list-style: none;
     padding: 0;
@@ -79,40 +79,33 @@ footer {
 
 .social-icons a {
     text-decoration: none;
-    color: black;
-    padding: 0 15px;
+    color: #fff;
     font-size: 20px;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Copyright */
-.copyright {
-    margin-top: 20px;
-    font-size: 12px;
+.social-icons a:hover {
+    color: #1e4168;
 }
 
 .company {
-    font-size: 75px;
-    color: peachpuff;
-    font-weight: 900;
-}
-.company_nav a {
-    text-decoration: none;
-    padding: 15px 15px;
-    color: #ebe8e8;
+    font-size: 48px;
+    color: #ff9966;
+    font-weight: bold;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    background-color: #ebe8e893;
+    background-color: #f5f5f5;
 }
 
 th {
@@ -120,13 +113,19 @@ th {
     color: #fff;
 }
 
-/* Hover Effect */
 tr:hover {
     background-color: #ddd;
 }
-.page-link{
+
+.page-link {
     text-decoration: none;
-    color: black;
+    color: #1e4168;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.page-link:hover {
+    color: #0d2746;
 }
 
 .container_image {
@@ -134,7 +133,7 @@ tr:hover {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #f5f5f5b7;
+    background-color: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -142,10 +141,13 @@ tr:hover {
 
 h1 {
     color: #333;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
 p {
     color: #666;
+    line-height: 1.6;
 }
 
 .with_image {
@@ -155,17 +157,37 @@ p {
     text-align: center;
     display: inline-block;
     margin: 0 60px 60px;
-    border: 1px solid black;
+    border: 1px solid #000;
     width: 500px;
-    height: 1000px;
+    height: 500px;
 }
 
-
 .dep_image .resized_image {
-    width: 450px; /* Set the desired width */
-    height: 450px; /* Maintain aspect ratio by setting height to auto */
+    width: 100%;
+    height: auto;
 }
 
 .th_center {
     text-align: center;
+}
+
+.navbar {
+    padding: 20px 15px;
+    background-color: #2d2d2d; /* Matching navbar color with the footer */
+    color: #fff;
+    align-self: flex-end; /* Align the navbar to the right */
+}
+
+/* Modify the background color for navbar links */
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #6b6b6b; /* Adjust to complement the navbar color */
+    padding: 8px 15px; /* Adjust padding as needed */
+    border-radius: 4px; /* Adding rounded corners */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #4a4a4a; /* Darker shade for link hover */
 }
